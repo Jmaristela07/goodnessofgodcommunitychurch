@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
+	<script>
+	function checkDevice() {
+      if (window.innerWidth < 1280) {
+         // Kapag maliit ang screen, itapon siya sa mobile.html
+			window.location.href = "mobile_Contact.html";
+        }
+    }
+    
+    // Check agad pagbukas ng page
+    checkDevice();
+    
+    // Check din kapag nire-resize ang window
+    window.addEventListener('resize', checkDevice);
+	</script>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,44 +34,42 @@
   </div>
   <!-- text: HOME -->
   <div class="shape text h-o-m-e-99cc636347a0">
-  <a href="index.html" class="no-underline"></a>
     <div class="text-node-html" id="html-text-node-8c427d8c-5951-80da-8007-99cc636347a0" data-x="5544" data-y="-1937">
       <div class="root rich-text root-0" xmlns="http://www.w3.org/1999/xhtml">
         <div class="paragraph-set root-0-paragraph-set-0">
-          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="ltr"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0">HOME</span></p>
+          <a href="index.html" class="no-underline"><p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="ltr"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0">HOME</span></p></a>
         </div>
       </div>
     </div>
   </div>
   <!-- text: About Us -->
   <div class="shape text about-us-99cc636347a1">
-  <a href="About_Us.html" class="no-underline"></a>
     <div class="text-node-html" id="html-text-node-8c427d8c-5951-80da-8007-99cc636347a1" data-x="5689" data-y="-1937">
       <div class="root rich-text root-0" xmlns="http://www.w3.org/1999/xhtml">
         <div class="paragraph-set root-0-paragraph-set-0">
-          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="ltr"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0">ABOUT US</span></p>
+          <a href="About_Us.html" class="no-underline"><p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="ltr"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0">ABOUT US</span></p></a>
         </div>
       </div>
     </div>
   </div>
   <!-- text: Gallery -->
   <div class="shape text gallery-99cc636347a2">
-  <a href="Gallery.html" class="no-underline"></a>
+	
     <div class="text-node-html" id="html-text-node-8c427d8c-5951-80da-8007-99cc636347a2" data-x="5873" data-y="-1937">
       <div class="root rich-text root-0" xmlns="http://www.w3.org/1999/xhtml">
         <div class="paragraph-set root-0-paragraph-set-0">
-          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="ltr"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0">GALLERY</span></p>
+          <a href="Gallery.html" class="no-underline"><p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="ltr"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0">GALLERY</span></p></a>
         </div>
       </div>
     </div>
   </div>
   <!-- text: Contact Us -->
   <div class="shape text contact-us-99cc636347a3">
-  <a href="Contact_Us.html" class="no-underline"></a>
+	
     <div class="text-node-html" id="html-text-node-8c427d8c-5951-80da-8007-99cc636347a3" data-x="6047" data-y="-1937">
       <div class="root rich-text root-0" xmlns="http://www.w3.org/1999/xhtml">
         <div class="paragraph-set root-0-paragraph-set-0">
-          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="ltr"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0">CONTACT US</span></p>
+          <a href="Contact_Us.html" class="no-underline"><p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="ltr"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0">CONTACT US</span></p></a>
         </div>
       </div>
     </div>
@@ -149,52 +161,46 @@ LIVES -->
     <!-- rect: Rectangle -->
      
     <div class="shape rect rectangle-99ccbb1bd232">
-      <!-- Form -->
-       <!-- next project will be a formspree.io-->
-    <form class="my-form" 
-          action="https://formspree.io/f/xbdpyoze" 
-          method="post" 
-          enctype="text/plain">
-    <div class="form-row">
-        <div class="field-group">
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="name" 
-            onclick="event.stopPropagation();" 
-            onfocus="event.stopPropagation();"required>
+	
+	<!-- Form -->
+      <div class="contact-container">
+  <div class="contact-header">
+    <h2>Contact Us</h2>
+    <p>Where God's goodness touches lives.</p>
+  </div>
 
-        </div>
-        
-        <div class="field-group">
-            <label for="user-email">Email Address</label>
-            <input type="email" id="user-email" name="email" 
-            onclick="event.stopPropagation();" 
-            onfocus="event.stopPropagation();"required>
-        </div>
+  <form action="https://formspree.io/f/xbdpyoze" method="POST" class="modern-form">
+    <div class="form-group-row">
+      <div class="form-control">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="name" placeholder="Juan Dela Cruz" required>
+      </div>
+      <div class="form-control">
+        <label for="user-email">Email Address</label>
+        <input type="email" id="user-email" name="email" placeholder="example@email.com" required>
+      </div>
     </div>
 
-    <div class="field-group">
-        <label for="request-type">Type of Message</label>
-        <select id="request-type" name="type" 
-          onclick="event.stopPropagation();" 
-          onfocus="event.stopPropagation();">
-            <option value="inquiry">General Inquiry</option>
-            <option value="prayer">Prayer Request / Intercession</option>
-            <option value="testimony">Share a Testimony</option>
-            <option value="counseling">Pastoral Counseling</option>
-        </select>
+    <div class="form-control">
+      <label for="request-type">Type of Message</label>
+      <select id="request-type" name="type">
+        <option value="inquiry">General Inquiry</option>
+        <option value="prayer">Prayer Request / Intercession</option>
+        <option value="testimony">Share a Testimony</option>
+        <option value="counseling">Pastoral Counseling</option>
+      </select>
     </div>
 
-    <div class="field-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" 
-          onclick="event.stopPropagation();" 
-          onfocus="event.stopPropagation();"required></textarea>
+    <div class="form-control">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
     </div>
 
-    <button type="submit" class="submit-btn" 
-      onclick="event.stopPropagation();" 
-      onfocus="event.stopPropagation();">SUBMIT</button>
+    <button type="submit" class="submit-btn">SEND MESSAGE</button>
   </form>
+  <!--End Form -->
+  
+</div>
     </div>
   </div>
   
@@ -303,6 +309,6 @@ LIVES -->
   </div>
 </div>
 
-	<script src="main.js" defer></script>
+	<script src="main.js"></script>
 	</body>
 </html>
